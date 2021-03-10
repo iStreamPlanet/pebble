@@ -53,7 +53,7 @@ function CustomCellTable() {
   );
 }
 function compare(key) {
-  return function(a, b) {
+  return function (a, b) {
     // property does not exist
     if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
       return 0;
@@ -105,7 +105,7 @@ function SortableTable() {
     }
   };
 
-  const getSortedData = DATA => {
+  const getSortedData = (DATA) => {
     if (nameSortDirection) {
       const sorted = DATA.sort(compare('name'));
 

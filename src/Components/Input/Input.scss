@@ -56,17 +56,6 @@ input[type='search']::-webkit-search-cancel-button {
   padding: $INPUT_PADDING_L;
   font-size: $INPUT_FONT_SIZE_L;
 }
-.input-error {
-  background: $INPUT_BG_ERROR;
-  border: $INPUT_BORDER_ERROR;
-
-  &:focus {
-    outline: 0;
-    background: $INPUT_BG;
-    border: $INPUT_BORDER_ERROR;
-    box-shadow: $INPUT_FOCUS_SHADOW;
-  }
-}
 
 .input-prefix {
   background: $neutral-200;
@@ -90,6 +79,22 @@ input[type='search']::-webkit-search-cancel-button {
   border: $INPUT_BORDER;
   flex: 0 0 auto;
   margin-left: -1px;
+}
+
+.input-error {
+  background: $INPUT_BG_ERROR;
+  border: $INPUT_BORDER_ERROR;
+
+  &:first-child {
+    border-right: none;
+  }
+
+  &:focus {
+    outline: 0;
+    background: $INPUT_BG;
+    border: $INPUT_BORDER_ERROR;
+    box-shadow: $INPUT_FOCUS_SHADOW;
+  }
 }
 
 .input-clear-btn {

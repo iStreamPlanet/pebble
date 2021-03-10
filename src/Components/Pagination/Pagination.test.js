@@ -55,10 +55,7 @@ describe('Pagination', () => {
           numPages={5}
         />,
       );
-      wrapper
-        .find(Button)
-        .first()
-        .simulate('click');
+      wrapper.find(Button).first().simulate('click');
       expect(onPageChangeFunc).toHaveBeenCalledWith(0);
     });
 
@@ -71,10 +68,7 @@ describe('Pagination', () => {
           numPages={5}
         />,
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find(Button).last().simulate('click');
       expect(onPageChangeFunc).toHaveBeenCalledWith(2);
     });
   });
@@ -89,18 +83,10 @@ describe('Pagination', () => {
           numPages={1.2}
         />,
       );
-      expect(
-        wrapper
-          .find(Button)
-          .first()
-          .prop('disabled'),
-      ).toBe(false);
-      expect(
-        wrapper
-          .find(Button)
-          .last()
-          .prop('disabled'),
-      ).toBe(true);
+      expect(wrapper.find(Button).first().prop('disabled')).toBe(
+        false,
+      );
+      expect(wrapper.find(Button).last().prop('disabled')).toBe(true);
     });
 
     it('does not disable the Next button if numPages is not set', () => {
@@ -111,18 +97,12 @@ describe('Pagination', () => {
           onPageChange={onPageChangeFunc}
         />,
       );
-      expect(
-        wrapper
-          .find(Button)
-          .first()
-          .prop('disabled'),
-      ).toBe(false);
-      expect(
-        wrapper
-          .find(Button)
-          .last()
-          .prop('disabled'),
-      ).toBe(false);
+      expect(wrapper.find(Button).first().prop('disabled')).toBe(
+        false,
+      );
+      expect(wrapper.find(Button).last().prop('disabled')).toBe(
+        false,
+      );
     });
   });
 });

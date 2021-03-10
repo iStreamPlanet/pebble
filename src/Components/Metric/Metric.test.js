@@ -37,35 +37,15 @@ describe('Metric', () => {
 
   it('sets the correct Text sizes if not mobile', () => {
     const wrapper = shallow(<Metric value="5" title="test metric" />);
-    expect(
-      wrapper
-        .find(Text)
-        .at(0)
-        .prop('size'),
-    ).toBe(6);
-    expect(
-      wrapper
-        .find(Text)
-        .at(1)
-        .prop('size'),
-    ).toBe(1);
+    expect(wrapper.find(Text).at(0).prop('size')).toBe(6);
+    expect(wrapper.find(Text).at(1).prop('size')).toBe(1);
   });
   it('sets the correct Text sizes if mobile', () => {
     useResponsiveLayout.mockClear();
     useResponsiveLayout.mockImplementation(() => [true, false]);
     const wrapper = shallow(<Metric value="5" title="test metric" />);
-    expect(
-      wrapper
-        .find(Text)
-        .at(0)
-        .prop('size'),
-    ).toBe(7);
-    expect(
-      wrapper
-        .find(Text)
-        .at(1)
-        .prop('size'),
-    ).toBe(1);
+    expect(wrapper.find(Text).at(0).prop('size')).toBe(7);
+    expect(wrapper.find(Text).at(1).prop('size')).toBe(1);
   });
 
   it('calls colorRules if colorRules is a function', () => {

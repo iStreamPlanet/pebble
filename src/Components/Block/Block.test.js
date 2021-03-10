@@ -16,12 +16,7 @@ describe('Block', () => {
         <p>Second Paragraph</p>
       </Block>,
     );
-    expect(
-      wrapper
-        .find('p')
-        .first()
-        .text(),
-    ).toBe('Hello Pebble');
+    expect(wrapper.find('p').first().text()).toBe('Hello Pebble');
     expect(wrapper.find('div').children()).toHaveLength(2);
   });
 
@@ -116,10 +111,7 @@ describe('Block', () => {
           </Block>,
         );
         expect(
-          wrapper
-            .find(Block)
-            .first()
-            .prop('className'),
+          wrapper.find(Block).first().prop('className'),
         ).toContain('mr-3');
       });
 
@@ -131,16 +123,10 @@ describe('Block', () => {
           </Block>,
         );
         expect(
-          wrapper
-            .find(Block)
-            .first()
-            .prop('className'),
+          wrapper.find(Block).first().prop('className'),
         ).toContain('red');
         expect(
-          wrapper
-            .find(Block)
-            .first()
-            .prop('className'),
+          wrapper.find(Block).first().prop('className'),
         ).toContain('mr-3');
       });
     }),

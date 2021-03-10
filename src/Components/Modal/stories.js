@@ -55,7 +55,7 @@ ModalExample.propTypes = {
 };
 
 storiesOf('Modal', module)
-  .addDecorator(storyFn => (
+  .addDecorator((storyFn) => (
     <div style={{ width: '800px', height: '800px' }}>{storyFn()}</div>
   ))
   .addParameters({

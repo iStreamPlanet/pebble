@@ -57,7 +57,7 @@ const defaultProps = {
  */
 
 class Pagination extends React.PureComponent {
-  getMenuOptions = numPages => {
+  getMenuOptions = (numPages) => {
     const menuOptions = [];
     for (let i = 1; i <= numPages; i++) {
       menuOptions.push({ value: i, label: `${i}` });
@@ -65,7 +65,7 @@ class Pagination extends React.PureComponent {
     return menuOptions;
   };
 
-  onPageSelect = selected => {
+  onPageSelect = (selected) => {
     const { currentPage, onPageChange } = this.props;
     // call coming from the next/prev button, or from the FieldSelect
     const page =

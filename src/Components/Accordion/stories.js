@@ -250,7 +250,7 @@ storiesOf('Accordion', module)
     </Accordion>
   ))
   .add('Nested with label renderProp', () => {
-    const items = VDCM.map(program => (
+    const items = VDCM.map((program) => (
       <CollapsiblePanel
         id={`${program.id}`}
         background="neutral-200"
@@ -268,7 +268,7 @@ storiesOf('Accordion', module)
             return (
               <CollapsiblePanel
                 background="neutral-300"
-                label={props => (
+                label={(props) => (
                   <ServiceID
                     onToggle={props.onToggle}
                     open={props.open}
@@ -323,7 +323,7 @@ function ServiceID(props) {
 }
 
 function SidVideoDetail({ specs }) {
-  const displaySpecs = Object.keys(specs).map(keyName => (
+  const displaySpecs = Object.keys(specs).map((keyName) => (
     <Block
       key={keyName}
       border="bottom"

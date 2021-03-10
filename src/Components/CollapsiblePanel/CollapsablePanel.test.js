@@ -52,7 +52,7 @@ describe('CollapsiblePanel', () => {
         id="panel1"
         open
         onToggle={jest.fn()}
-        label={props => (
+        label={(props) => (
           <ServiceID
             label="PMT: 411 (0x19b): MPEG-4 AVC"
             type="video"

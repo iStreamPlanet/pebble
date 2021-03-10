@@ -452,7 +452,7 @@ class Block extends React.PureComponent {
       ? { flexBasis: BASIS_MAP[basis] || basis }
       : null;
 
-    const flexGrowShrinkProp = flex => {
+    const flexGrowShrinkProp = (flex) => {
       if (displayBlock) return;
 
       if (typeof flex === 'boolean' || typeof flex === 'string') {
@@ -539,7 +539,7 @@ class Block extends React.PureComponent {
         itemSpacing !== undefined
           ? React.Children.map(
               children,
-              child =>
+              (child) =>
                 child &&
                 React.cloneElement(child, {
                   className: classNames(

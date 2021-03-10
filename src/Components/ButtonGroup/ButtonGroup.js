@@ -53,7 +53,7 @@ function ButtonGroup(props) {
 
   return (
     <div className={classes}>
-      {React.Children.map(children, child => (
+      {React.Children.map(children, (child) => (
         <div
           key={child.key}
           className={toolbar ? 'btn-toolbar-item' : 'btn-group-item'}

@@ -305,7 +305,7 @@ class FieldDateTime extends React.PureComponent {
     return momentValue;
   }
 
-  onChange = value => {
+  onChange = (value) => {
     const { excludeTime, onChange } = this.props;
     if (moment.isMoment(value)) {
       // this code either clears out the time complete, e.g. 00:00:00.000
@@ -321,7 +321,7 @@ class FieldDateTime extends React.PureComponent {
     }
   };
 
-  filterDate = value => {
+  filterDate = (value) => {
     const { filterDate } = this.props;
     return filterDate ? filterDate(value.toISOString()) : true;
   };
@@ -359,20 +359,10 @@ class FieldDateTime extends React.PureComponent {
     const momentMaxDate = maxDate ? moment(maxDate) : undefined;
 
     const momentMinTime =
-      minTime ||
-      (maxTime
-        ? moment()
-            .hours(0)
-            .minutes(0)
-        : null);
+      minTime || (maxTime ? moment().hours(0).minutes(0) : null);
 
     const momentMaxTime =
-      maxTime ||
-      (minTime
-        ? moment()
-            .hours(23)
-            .minutes(59)
-        : null);
+      maxTime || (minTime ? moment().hours(23).minutes(59) : null);
 
     const classes = classNames('field-text', className);
 

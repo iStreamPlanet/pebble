@@ -28,7 +28,7 @@ function FieldTextExample() {
     '13 characters',
   );
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setEventResult(`handleChange called with '${e.target.value}'`);
     setBasic(e.target.value);
   };
@@ -66,7 +66,7 @@ function FieldTextExample() {
         label="Autofocus"
         id="autofocus"
         value={autoFocus}
-        onChange={e => setAutoFocus(e.target.value)}
+        onChange={(e) => setAutoFocus(e.target.value)}
         className="mb-5"
       />
 
@@ -75,7 +75,7 @@ function FieldTextExample() {
         label="Disabled"
         id="disabled-input"
         value={disabledInput}
-        onChange={e => setDisabledInput(e.target.value)}
+        onChange={(e) => setDisabledInput(e.target.value)}
         className="mb-5"
       />
 
@@ -84,7 +84,7 @@ function FieldTextExample() {
         label="Read Only"
         id="readOnly-input"
         value={readOnlyInput}
-        onChange={e => setReadOnlyInput(e.target.value)}
+        onChange={(e) => setReadOnlyInput(e.target.value)}
         className="mb-5"
       />
 
@@ -93,7 +93,7 @@ function FieldTextExample() {
         label="With Placeholder"
         id="placeholder-input"
         value={placeholderInput}
-        onChange={e => setPlaceholderInput(e.target.value)}
+        onChange={(e) => setPlaceholderInput(e.target.value)}
         className="mb-5"
       />
 
@@ -101,7 +101,7 @@ function FieldTextExample() {
         label="With Help Text"
         id="helptext-input"
         value={helpTextInput}
-        onChange={e => setHelpTextInput(e.target.value)}
+        onChange={(e) => setHelpTextInput(e.target.value)}
         className="mb-5"
         helpText="I'm some helpful text"
       />
@@ -112,7 +112,7 @@ function FieldTextExample() {
         label="Is Invalid"
         id="error-input"
         value={errorInput}
-        onChange={e => setErrorInput(e.target.value)}
+        onChange={(e) => setErrorInput(e.target.value)}
         className="mb-5"
       />
 
@@ -121,7 +121,7 @@ function FieldTextExample() {
         label="Spellcheck Disabled"
         id="spellcheck-input"
         value={spellcheckInput}
-        onChange={e => setSpellcheckInput(e.target.value)}
+        onChange={(e) => setSpellcheckInput(e.target.value)}
         className="mb-5"
       />
 
@@ -130,7 +130,7 @@ function FieldTextExample() {
         label="Max Length of 3"
         id="maxLength-input"
         value={maxLengthInput}
-        onChange={e => setMaxLengthInput(e.target.value)}
+        onChange={(e) => setMaxLengthInput(e.target.value)}
         className="mb-5"
       />
 
@@ -139,7 +139,7 @@ function FieldTextExample() {
         label="With a prefix"
         id="prefix-input"
         value={prefixInput}
-        onChange={e => setPrefixInput(e.target.value)}
+        onChange={(e) => setPrefixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -148,7 +148,7 @@ function FieldTextExample() {
         label="With a suffix"
         id="suffix-input"
         value={suffixInput}
-        onChange={e => setSuffixInput(e.target.value)}
+        onChange={(e) => setSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -158,7 +158,7 @@ function FieldTextExample() {
         label="With Prefix and Suffix"
         id="suffix-input2"
         value={prefixSuffixInput}
-        onChange={e => setPrefixSuffixInput(e.target.value)}
+        onChange={(e) => setPrefixSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -168,7 +168,7 @@ function FieldTextExample() {
         label="Character Count with Max Length of 20"
         id="characterCount-input"
         value={characterCountInput}
-        onChange={e => setCharacterCountInput(e.target.value)}
+        onChange={(e) => setCharacterCountInput(e.target.value)}
         className="mb-5"
       />
 
@@ -177,7 +177,7 @@ function FieldTextExample() {
         label="With Clear Button"
         id="clearBtn-input"
         value={clearBtnInput}
-        onChange={e => setClearBtnInput(e.target.value)}
+        onChange={(e) => setClearBtnInput(e.target.value)}
         className="mb-5"
       />
 
@@ -207,7 +207,7 @@ function PrefixSuffixExample() {
         label="With a prefix"
         id="prefix-input"
         value={prefixInput}
-        onChange={e => setPrefixInput(e.target.value)}
+        onChange={(e) => setPrefixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -216,7 +216,7 @@ function PrefixSuffixExample() {
         label="With a suffix"
         id="suffix-input"
         value={suffixInput}
-        onChange={e => setSuffixInput(e.target.value)}
+        onChange={(e) => setSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -228,7 +228,7 @@ function PrefixSuffixExample() {
         label="With Prefix and Suffix"
         id="suffix-input2"
         value={prefixSuffixInput}
-        onChange={e => setPrefixSuffixInput(e.target.value)}
+        onChange={(e) => setPrefixSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -239,7 +239,7 @@ function PrefixSuffixExample() {
         label="With Prefix and Suffix"
         id="suffix-input2"
         value={prefixSuffixInput}
-        onChange={e => setPrefixSuffixInput(e.target.value)}
+        onChange={(e) => setPrefixSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -251,7 +251,7 @@ function PrefixSuffixExample() {
         label="With Prefix and Suffix"
         id="suffix-input2"
         value={prefixSuffixInput}
-        onChange={e => setPrefixSuffixInput(e.target.value)}
+        onChange={(e) => setPrefixSuffixInput(e.target.value)}
         className="mb-5"
       />
 
@@ -266,7 +266,7 @@ function PrefixSuffixExample() {
         label="Small prefix icon"
         id="small-prefix-icon-input"
         value={iconInput}
-        onChange={e => setIconInput(e.target.value)}
+        onChange={(e) => setIconInput(e.target.value)}
         className="mb-5"
       />
 
@@ -280,7 +280,7 @@ function PrefixSuffixExample() {
         label="Prefix icon"
         id="prefix-icon-input"
         value={iconInput}
-        onChange={e => setIconInput(e.target.value)}
+        onChange={(e) => setIconInput(e.target.value)}
         className="mb-5"
       />
 
@@ -303,7 +303,7 @@ function PrefixSuffixExample() {
         label="Large prefix icon"
         id="large-prefix-icon-input"
         value={iconInput}
-        onChange={e => setIconInput(e.target.value)}
+        onChange={(e) => setIconInput(e.target.value)}
         className="mb-5"
       />
     </>

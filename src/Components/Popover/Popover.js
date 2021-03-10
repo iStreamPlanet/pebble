@@ -79,7 +79,7 @@ const defaultProps = {
  * ---
  */
 
-const Popover = props => {
+const Popover = (props) => {
   const {
     arrowColor,
     children,
@@ -116,7 +116,7 @@ const Popover = props => {
 
   useKeyboardEvent('Escape', close);
 
-  const onBodyClick = e => {
+  const onBodyClick = (e) => {
     const popover = popoverRef.current;
     const trigger = triggerRef.current;
 
@@ -153,7 +153,7 @@ const Popover = props => {
 
   const renderTrigger = (ref, className) => {
     return React.cloneElement(children, {
-      onClick: e => {
+      onClick: (e) => {
         onTriggerClicked();
         if (children.props.onClick) {
           children.props.onClick(e);
@@ -192,7 +192,7 @@ const Popover = props => {
   return (
     <ConditionalWrapper
       condition={trapFocus}
-      wrapper={children => (
+      wrapper={(children) => (
         <FocusTrap
           active={showing}
           focusTrapOptions={{

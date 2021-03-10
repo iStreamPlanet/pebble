@@ -178,7 +178,7 @@ export class Frame extends React.PureComponent {
     this.setState({ showTenantMenu: !showTenantMenu });
   };
 
-  handleNavKeydown = event => {
+  handleNavKeydown = (event) => {
     const { key } = event;
     if (key === 'Escape') {
       this.handleNavigationDismiss();

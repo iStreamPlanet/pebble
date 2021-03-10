@@ -22,12 +22,9 @@ describe('FieldCheckbox', () => {
       const wrapper = shallow(
         <FieldCheckbox id="test" toggle label="toggle" />,
       );
-      expect(
-        wrapper
-          .find(Block)
-          .at(0)
-          .prop('className'),
-      ).toContain('toggle');
+      expect(wrapper.find(Block).at(0).prop('className')).toContain(
+        'toggle',
+      );
     });
 
     it('applies label as aria-label if hideLabel is true', () => {

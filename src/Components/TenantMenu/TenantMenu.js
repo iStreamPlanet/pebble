@@ -45,7 +45,7 @@ const defaultProps = {
 };
 
 const variants = {
-  popUp: custom => {
+  popUp: (custom) => {
     return {
       opacity: [0, 1],
       y: [24, 0],

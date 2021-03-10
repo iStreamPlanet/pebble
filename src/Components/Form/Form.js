@@ -47,14 +47,14 @@ const propTypes = {
  */
 
 class Form extends React.PureComponent {
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     const { onSubmit } = this.props;
 
     event.preventDefault();
     onSubmit(event);
   };
 
-  handleReset = event => {
+  handleReset = (event) => {
     const { onReset } = this.props;
     event.preventDefault();
     onReset(event);

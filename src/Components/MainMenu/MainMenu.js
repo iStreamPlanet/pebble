@@ -105,9 +105,11 @@ class MainMenu extends React.Component {
           strict: true,
         }) !== null) ||
       (item.aliases || []).some(
-        path => matchPath(location.pathname, { path }) !== null,
+        (path) => matchPath(location.pathname, { path }) !== null,
       ) ||
-      (item.items || []).some(i => MainMenu.shouldBeOpen(location, i))
+      (item.items || []).some((i) =>
+        MainMenu.shouldBeOpen(location, i),
+      )
     );
   }
 

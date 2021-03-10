@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import FieldDateTime from './FieldDateTime';
 import { storiesOf } from '@storybook/react';
 
-const FieldDateTimeExample = props => {
+const FieldDateTimeExample = (props) => {
   const [selectedDate, setSelectedDate] = useState(
     '2019-06-26T12:00:00.000Z',
   );
-  const handleChange = value => {
+  const handleChange = (value) => {
     setSelectedDate(value);
   };
   return (
@@ -22,9 +22,9 @@ const FieldDateTimeExample = props => {
   );
 };
 
-const FieldDateTimeEmptyExample = props => {
+const FieldDateTimeEmptyExample = (props) => {
   const [selectedDate, setSelectedDate] = useState('');
-  const handleChange = value => {
+  const handleChange = (value) => {
     setSelectedDate(value);
   };
   return (
@@ -38,7 +38,7 @@ const FieldDateTimeEmptyExample = props => {
   );
 };
 
-const filterDate = value => {
+const filterDate = (value) => {
   const date = new Date(value);
   return date.getDay() < 5;
 };

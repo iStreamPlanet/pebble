@@ -17,7 +17,7 @@ export const parseSize = (size, element) => {
   return size;
 };
 
-export const parseElement = element => {
+export const parseElement = (element) => {
   if (typeof element !== 'number') {
     element = parseInt(element, 10);
   }

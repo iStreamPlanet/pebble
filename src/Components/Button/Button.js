@@ -166,7 +166,7 @@ const Button = React.forwardRef((props, ref) => {
     <Icon name="spinner" className="btn-loading-spinner" />
   ) : null;
 
-  const iconElement = function(name) {
+  const iconElement = function (name) {
     const iconSize = caseInsensitiveStringCompare(size, 'large')
       ? 20
       : 16;

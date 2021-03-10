@@ -209,7 +209,7 @@ function Modal({
     <Overlay className="modal-container" justify="center">
       <ConditionalWrapper
         condition={!notDismissable}
-        wrapper={children => (
+        wrapper={(children) => (
           <FocusTrap
             active={showing}
             focusTrapOptions={{

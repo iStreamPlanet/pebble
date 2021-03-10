@@ -62,9 +62,9 @@ export class Tabs extends React.PureComponent {
         const selected =
           selectedId === '' || selectedId === undefined
             ? tabs[0].id
-            : tabs[tabs.findIndex(tab => tab.id === selectedId)].id;
+            : tabs[tabs.findIndex((tab) => tab.id === selectedId)].id;
 
-        return tabs.map(tab => (
+        return tabs.map((tab) => (
           <Tab
             label={tab.label}
             id={tab.id}
@@ -83,7 +83,7 @@ export class Tabs extends React.PureComponent {
           ? children[0].props.tabId
           : selectedId;
 
-      return React.Children.map(children, child => (
+      return React.Children.map(children, (child) => (
         <Tab
           label={child.props.label}
           id={child.props.tabId}
@@ -103,7 +103,7 @@ export class Tabs extends React.PureComponent {
         const selectedIndex =
           selectedId === '' || selectedId === undefined
             ? 0
-            : tabs.findIndex(tab => selectedId === tab.id);
+            : tabs.findIndex((tab) => selectedId === tab.id);
 
         return (
           <Block
@@ -122,7 +122,7 @@ export class Tabs extends React.PureComponent {
         selectedId === '' || selectedId === undefined
           ? 0
           : childArray.findIndex(
-              child => selectedId === child.props.tabId,
+              (child) => selectedId === child.props.tabId,
             );
 
       return childArray[selectedIndex];

@@ -80,12 +80,9 @@ describe('Modal', () => {
           content
         </Modal>,
       );
-      expect(
-        instance
-          .find(Icon)
-          .at(0)
-          .prop('name'),
-      ).toBe('remove-circle');
+      expect(instance.find(Icon).at(0).prop('name')).toBe(
+        'remove-circle',
+      );
     });
   });
 

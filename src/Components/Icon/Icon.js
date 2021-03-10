@@ -12,7 +12,7 @@ const notFoundIcon = (
   />
 );
 
-export const parseSize = size => {
+export const parseSize = (size) => {
   if (typeof size !== 'number') {
     size = parseInt(size, 10);
   }

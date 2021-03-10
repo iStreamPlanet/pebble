@@ -129,7 +129,7 @@ storiesOf('Popover', module)
       trapFocus
       isOpen
       arrowColor="neutral-200"
-      content={onTriggerClicked => (
+      content={(onTriggerClicked) => (
         <Block
           background="white"
           displayBlock

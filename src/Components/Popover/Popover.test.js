@@ -85,7 +85,7 @@ describe('Popover', () => {
     const { getByText, queryByText } = render(
       <Popover
         arrowColor="blue"
-        content={onTriggerClicked => (
+        content={(onTriggerClicked) => (
           <div>
             <button type="button" onClick={onTriggerClicked}>
               Content Button
@@ -106,7 +106,7 @@ describe('Popover', () => {
       <Popover
         trapFocus
         arrowColor="neutral-200"
-        content={onTriggerClicked => (
+        content={(onTriggerClicked) => (
           <div>
             <button onClick={onTriggerClicked} type="button">
               focusable button

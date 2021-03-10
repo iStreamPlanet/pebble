@@ -65,7 +65,7 @@ function FormLayout({
       className={classNames(className)}
       {...rest}
     >
-      {React.Children.map(children, child => {
+      {React.Children.map(children, (child) => {
         if (child && child.type === FormLayoutRow) {
           return React.cloneElement(child, { tight });
         }

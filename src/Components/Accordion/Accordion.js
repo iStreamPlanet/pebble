@@ -69,7 +69,7 @@ function Accordion(props) {
 
   const [active, setActive] = useState(startOpen);
 
-  const handlePanelChange = selectedId => {
+  const handlePanelChange = (selectedId) => {
     const isOpen = !!active[selectedId];
     if (allowMultiple) {
       setActive({
@@ -84,7 +84,7 @@ function Accordion(props) {
     onChange && onChange(selectedId);
   };
 
-  const clones = Children.map(children, child => {
+  const clones = Children.map(children, (child) => {
     if (!isValidElement(child)) return;
     return cloneElement(child, {
       open: !!active[child.props.id],

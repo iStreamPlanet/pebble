@@ -113,7 +113,7 @@ const getValueColor = (colorRules, value) => {
  * @param {string} size small, medium, large
  */
 
-export const getMetricValueSize = size => {
+export const getMetricValueSize = (size) => {
   switch (size) {
     case 'large':
       return 1;

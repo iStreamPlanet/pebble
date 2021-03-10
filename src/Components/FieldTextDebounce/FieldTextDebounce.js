@@ -223,12 +223,12 @@ const FieldTextDebounce = ({
     if (onFocus) onFocus();
   };
 
-  const handleBlur = event => {
+  const handleBlur = (event) => {
     setShowMinimumMsg(false);
     if (onBlur) onBlur(event);
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const newValue = (event.target || {}).value;
     setInternalValue(newValue);
     setExternalValue(newValue);

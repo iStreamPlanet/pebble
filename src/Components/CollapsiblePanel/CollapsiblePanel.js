@@ -37,7 +37,7 @@ function CollapsiblePanel(props) {
 
   const arrowIcon = open ? 'arrow-small-up' : 'arrow-small-down';
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     event.preventDefault();
     onToggle();
   };

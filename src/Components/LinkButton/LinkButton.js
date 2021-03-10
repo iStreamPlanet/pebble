@@ -108,7 +108,7 @@ const LinkButton = forwardRef((props, ref) => {
     disabled,
   });
 
-  const iconElement = function(name) {
+  const iconElement = function (name) {
     const iconSize = caseInsensitiveStringCompare(size, 'large')
       ? 20
       : 16;

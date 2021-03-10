@@ -67,10 +67,10 @@ function FieldRadioGroup({
       const selected =
         value === '' || value === undefined
           ? radios[0].value
-          : radios[radios.findIndex(radio => radio.value === value)]
+          : radios[radios.findIndex((radio) => radio.value === value)]
               .value;
 
-      return radios.map(radio =>
+      return radios.map((radio) =>
         selected === radio.value
           ? { ...radio, ...{ isSelected: true, name } }
           : radio,
@@ -78,9 +78,9 @@ function FieldRadioGroup({
     }
   };
 
-  const radioMarkup = radios => {
+  const radioMarkup = (radios) => {
     if (radios && radios.length > 0) {
-      return radios.map(radio => (
+      return radios.map((radio) => (
         <Radio
           disabled={radio.disabled}
           key={radio.id}

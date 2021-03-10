@@ -17,7 +17,7 @@ const uptime = {
   '.9999-1': 'success',
 };
 
-const channelStatus = value => {
+const channelStatus = (value) => {
   switch (value) {
     case 'on':
       return 'success';
