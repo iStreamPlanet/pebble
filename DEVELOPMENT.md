@@ -5,19 +5,19 @@ The `main` branch is automatically deployed via Github Actions to [pebble.istrea
 #### Install the Packages
 
 ```shell
-$ yarn
+yarn
 ```
 
 #### Start Development Server
 
 ```shell
-$ yarn start
+yarn start
 ```
 
 #### Run unit tests
 
 ```shell
-$ yarn test
+yarn test
 ```
 
 #### Run test coverage
@@ -25,7 +25,7 @@ $ yarn test
 Although not strictly enforced, we aim for 100% unit test coverage for each component.
 
 ```shell
-$ yarn cover
+yarn cover
 ```
 
 #### Visual Regression Testing
@@ -35,7 +35,7 @@ Pebble uses [Chromatic](https://www.chromaticqa.com) and [Storybook](https://sto
 To run Chromatic on a local build, get Pebble's [Chromatic app code](https://www.chromaticqa.com/manage) and run the following command.
 
 ```shell
-$ yarn chromatic --app-code=<your-app-code>
+yarn chromatic --app-code=<your-app-code>
 ```
 
 For more information, see the [Chromatic Documentation](http://docs.chromaticqa.com/test).
@@ -45,19 +45,19 @@ Otherwise, Chromatic will run automatically when you push to a remote branch.
 #### Run Documentation Site (React Styleguidist)
 
 ```shell
-$ yarn styleguide
+yarn styleguide
 ```
 
 #### Run Storybook Site
 
 ```shell
-$ yarn storybook
+yarn storybook
 ```
 
 #### Build Documentation Site
 
 ```shell
-$ yarn styleguide:build
+yarn styleguide:build
 ```
 
 ---
@@ -68,22 +68,30 @@ $ yarn styleguide:build
 
 Package releases should be done through the following commands:
 
+Update your local checkout and make sure it is up to date
+
+```shell
+git fetch --tags
+git checkout main
+git pull origin main
+```
+
 release a patch update
 
 ```shell
-$ npm version patch -m "release package %s because reasons"
+npm version patch -m "release package %s because reasons"
 ```
 
 release a minor update
 
 ```shell
-$ npm version minor -m "release package %s because reasons"
+npm version minor -m "release package %s because reasons"
 ```
 
 or for an alpha pre-release minor update
 
 ```shell
-$ npm version pre-minor -m "release package %s as alpha because reasons" --preid=alpha
+npm version pre-minor -m "release package %s as alpha because reasons" --preid=alpha
 ```
 
 The following will then happen
@@ -97,6 +105,14 @@ From there the CI machine takes over and for every tagged commit the following h
 
 - `NPM publish` is run, this in turn will trigger our `prepack` that cleans and builds the package
 - The newly minted package is published with the `next` tag. This is done to prevent `prerelease` packages from being installed by default.
+
+#### Troubleshooting
+
+If both the tag and branch fail to push, please open an issue requesting a new release be made.
+
+If the tag is pushed up but the branch fails to push, please create a PR with the changes to keep them in sync.
+
+If the branch is pushed up but the tag fails to push, this probably means the tag already existed.
 
 ### Tag "latest" on npm
 
